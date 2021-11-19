@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="add-book">
+      <button class="btn add">Add Book</button>
+    </div>
+
+    <div class="modal">
+      <div class="input-field">
+        <label for="title">Title</label>
+        <input class="input" id="title" name="title" type="text" />
+        <label for="author">Author</label>
+        <input class="input" id="author" name="author" type="text" />
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" class="input" name="genre" />
+        <label for="description">Description</label>
+        <textarea
+          class="input"
+          id="description"
+          name="description"
+          type="text"
+        ></textarea>
+        <label for="read">Read</label>
+        <input type="radio" name="readStatus" value="Read" id="read" />
+        <label for="not-read">Not Read</label>
+        <input type="radio" name="readStatus" value="Unread" id="not-read" />
+        <button class="btn-submit" type="submit">Submit</button>
+      </div>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
