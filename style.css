@@ -1,23 +1,18 @@
-:root {
-  --bg-clr: linear-gradient(to bottom, #ffd194, #d1913c);
-  --accent: #f0932b;
-  --card: linear-gradient(to right, #ffffff, #ece9e6);
-  --read-btn: #d1913c;
-  --genre-clr: linear-gradient(to bottom, #ffd194, #d1913c);
-  --read: #a89b8c;
-  --remove: #d66853;
-}
-
 * {
   box-sizing: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: #ffd194;
+}
+
 #container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 img {
@@ -26,8 +21,19 @@ img {
   object-fit: cover;
 }
 
+.genre-tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+  margin-left: 0.5em;
+  background: #d1913c;
+  background: linear-gradient(to bottom, #ffd194, #d1913c);
+  color: #fafafa;
+}
+
 .card {
-  margin: 1rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   width: 20rem;
@@ -60,19 +66,27 @@ img {
   justify-content: flex-end;
 }
 
-.add-book .add {
-  padding: 1rem 2rem;
-  background: var(--accent);
-  color: white;
-  font-size: 1.5rem;
-}
-
 .btn {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   min-width: 5rem;
+}
+.add-book .add {
+  padding: 1rem 2rem;
+  background: #f0932b;
+  color: white;
+  font-size: 1.5rem;
+}
+.btn-read {
+  color: white;
+  background: #a89b8c;
+}
+
+.btn-remove {
+  color: white;
+  background: #d66853;
 }
 
 .modal {

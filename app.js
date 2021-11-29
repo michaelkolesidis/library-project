@@ -24,7 +24,8 @@ function render(arr) {
         <span class="genre-tag">${book.genre}</span>
         <span class="read-tag ${book.read === "Read" ? "read" : "unread"}">${
       book.read
-    }</span>
+    }
+    </span>
         <h4>${book.title}</h4>
         <h5>${book.author}</h5>
 
@@ -54,7 +55,6 @@ function addBook() {
 
   let read = document.querySelector('input[name="readStatus"]:checked');
 
-  //   console.log(title, author, genre, description, read.value);
   if ((title, author, genre, description, read)) {
     let newBook = new Book(title, author, genre, description, read.value);
     myLibrary.push(newBook);
