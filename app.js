@@ -1,16 +1,30 @@
 const myLibrary = JSON.parse(localStorage.getItem("library") || "[]");
 
-function Book(title, author, genre, description, read) {
-  this.title = title;
-  this.author = author;
-  this.genre = genre;
-  this.description = description;
-  this.read = read;
+class Book {
+  constructor(title, author, genre, description, read) {
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+    this.description = description;
+    this.read = read;
+  }
+
+  toggleRead() {
+    this.read = this.read === "Unread" ? "Read" : "Unread";
+  }
 }
 
-Book.prototype.toggleRead = function () {
-  this.read = this.read === "Unread" ? "Read" : "Unread";
-};
+// function Book(title, author, genre, description, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.genre = genre;
+//   this.description = description;
+//   this.read = read;
+// }
+
+// Book.prototype.toggleRead = function () {
+//   this.read = this.read === "Unread" ? "Read" : "Unread";
+// };
 
 function render(arr) {
   const container = document.getElementById("container");
